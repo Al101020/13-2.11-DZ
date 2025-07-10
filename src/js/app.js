@@ -1,3 +1,5 @@
+import '../components/windowIncoming/windowIncoming';
+
 // import {
 //   Observable,
 //   Subject,
@@ -16,13 +18,10 @@
 // } from 'rxjs/operators'; // или
 // // import { map, pluck } from 'rxjs/operators'; // или
 
-const body = document.querySelector('body');
-
-function hello() {
-  const helloH3 = document.createElement('h3');
-  helloH3.textContent = 'Привет!!!';
-
-  body.append(helloH3);
-}
-
-hello();
+// const body = document.querySelector('body');
+// function hello() {
+//   const helloH3 = document.createElement('h3');
+//   helloH3.textContent = 'Привет!!!';
+//   body.append(helloH3);
+// }
+// hello();

@@ -1,0 +1,10 @@
+#windowIncoming {
+  width: 300px;
+  min-height: 30px;
+
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 2px;
+
+  padding: 15px 10px 10px 10px;
+}
