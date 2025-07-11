@@ -1,5 +1,5 @@
 #windowIncoming {
-  width: 300px;
+  width: 400px;
   min-height: 30px;
 
   background-color: white;
@@ -16,4 +16,23 @@
 .incoming {
   padding: 10px 10px 10px 10px;
   border: 1px solid #000;
+}
+
+/* display: inline-block; */
+
+.messageFrom {
+  display: inline-block;
+  margin: 0 10px 0 5px;
+  width: 100px;
+}
+
+.messageSubject {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  width: 120px;
+}
+
+.messageTime {
+  display: inline-block;
+  margin: 0 5px 0 10px;
 }

@@ -1,6 +1,6 @@
-export default function incoming() {
-  const divMessages = document.querySelector('#incomings'); // console.log(divMessages);
+import incomingData from './incomingData';
 
+export default function incoming() {
   fetch('http://localhost:7070/messages', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -13,16 +13,7 @@ export default function incoming() {
     })
     .then((data) => {
       // Обработка полученных данных пользователя
-      console.log('Данные: ', data);
-
-      for (let i = 0; i <= data.length; i += 1) {
-        console.log(data[i]);
-      }
-      const message = document.createElement('div');
-      message.classList.add('incoming');
-      message.textContent = 'А здесь нужно что-то умное про сервер придумать!';
-
-      divMessages.prepend(message);
+      incomingData(data);
     })
     .catch((error) => {
       console.log('Ошибка:', error);
