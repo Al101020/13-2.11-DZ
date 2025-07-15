@@ -48,20 +48,12 @@ const messages = [
 
     function timeDate() {
       let timeDate = new Date();
-      // год
-      let year = timeDate.getFullYear();
-      // месяц
-      let month = timeDate.getMonth() + 1;
-      // число
-      let Day = timeDate.getDate();
-      
-      // часы
-      let hours = timeDate.getHours();
-      // минуты
-      let minutes = timeDate.getMinutes();
-      // секунды
-      // let seconds = timeDate.getSeconds();
-
+      let year = timeDate.getFullYear();// год
+      let month = timeDate.getMonth() + 1;// месяц
+      let Day = timeDate.getDate();// число
+      let hours = timeDate.getHours();// часы
+      let minutes = timeDate.getMinutes();// минуты
+      // let seconds = timeDate.getSeconds();// секунды
       // return addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + ' ' + addZero(Day) + '.' + addZero(month) + '.' + year;
       return addZero(hours) + ':' + addZero(minutes) + ' ' + addZero(Day) + '.' + addZero(month) + '.' + year;
     }
@@ -73,24 +65,18 @@ const messages = [
     }
     // -
 
-function incomingAdd() {
-  // let timeDate = new Date();
+function incomingAdd() {  // let timeDate = new Date();
 
   if (messages.length < 7) {
     try {
       const inc =   {
         'from': 'anya@ivanova',
-        'subject': hello(),
-        // 'subject': 'Hello!!!!!!!!!!!',
-        'time': timeDate()
-        // 'time': '19:00 03.20.2019'
+        'subject': hello(),         // 'subject': 'Hello!!!!!!!!!!!',
+        'time': timeDate()         // 'time': '19:00 03.20.2019'
       }
       messages.push(inc);
     } catch (err) {console.log(err)}
   } else if (messages.length > 5) {
-    // messages[messages.length - 3].pop();
-    // messages.splice(-2, 2);
-    // messages.removeChild(messages[2]);
     messages.splice(2, 2);
   }
 }
