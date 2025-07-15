@@ -1,13 +1,13 @@
 import './windowIncoming.css';
 import functionIncoming from './incoming';
 
-const body = document.querySelector('body');// console.log(body);
-const titleDz = body.querySelector('h4');// console.log(titleDz);
+const body = document.querySelector('body');
+const titleDz = body.querySelector('h4');
 
 const windowIncoming = document.createElement('div');
 windowIncoming.id = 'windowIncoming';
-titleDz.insertAdjacentElement('afterend', windowIncoming); // вставляем окно Incoming после titleDz
-const windowInc = document.querySelector('#windowIncoming');// console.log(windowInc);
+titleDz.insertAdjacentElement('afterend', windowIncoming);
+const windowInc = document.querySelector('#windowIncoming');
 
 const titleWindowIncoming = document.createElement('div');
 titleWindowIncoming.textContent = 'Incoming';
@@ -16,16 +16,25 @@ windowInc.append(titleWindowIncoming);
 
 const incomings = document.createElement('div');
 incomings.id = 'incomings';
-windowInc.append(incomings); // вставка в окно Incoming непрочитанных входящих
+windowInc.append(incomings); // вставка Incoming непрочитанных входящих
 
 functionIncoming();
-// const data = functionIncoming();
-// console.log(data);
+// const idIncomings = document.querySelector('#incomings').children;
+// console.log(idIncomings);
+// console.log(idIncomings.length);
 
-// const divMessages = document.querySelector('#incomings'); // console.log(divMessages);
+// if (idIncomings.length === 0) {
+//     return;
+// } else {
+//     idIncomings.length = 0;
+// };
 
-// const message = document.createElement('div');
-// message.classList.add('incoming');
-// message.textContent = 'А здесь нужно что-то умное про сервер придумать!';
+setInterval(functionIncoming, 5000);
 
-// divMessages.prepend(message);
+// setTimeout(functionIncoming, 5000);
+
+// setTimeout(functionIncoming, 10000);
+
+// setTimeout(functionIncoming, 15000);
+
+// // setInterval(incomingAdd, 5000);

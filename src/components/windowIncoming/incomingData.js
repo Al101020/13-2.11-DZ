@@ -25,6 +25,7 @@ export default function incomingData(data) {
     const messageTime = document.createElement('div');
     messageTime.classList.add('messageTime');
     messageTime.textContent = data[i].time;
+    // messageTime.textContent = timeDate();
     message.append(messageTime);
 
     divMessages.prepend(message);
