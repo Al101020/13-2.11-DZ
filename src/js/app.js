@@ -1,3 +1,10 @@
+// вставка Incoming непрочитанных входящих
+
+import { Observable } from 'rxjs';
+
+import '../components/windowIncoming.css';
+import functionIncoming from '../components/incoming';
+
 const body = document.querySelector('body');
 const titleDz = body.querySelector('h4');
 
@@ -13,16 +20,11 @@ windowInc.append(titleWindowIncoming);
 
 const incomings = document.createElement('div');
 incomings.id = 'incomings';
-windowInc.append(incomings); // вставка Incoming непрочитанных входящих
-
-import { Observable } from 'rxjs';
-
-import '../components/windowIncoming.css';
-import functionIncoming from '../components/incoming';
+windowInc.append(incomings);
 
 const stream$ = new Observable((observer) => {
   let fetchData = null;
-  setInterval( async () => {
+  setInterval(async () => {
     fetch('http://localhost:7070/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -43,6 +45,6 @@ const stream$ = new Observable((observer) => {
   }, 5000);
 });
 
-stream$.subscribe((data) => {  // console.log(data);
+stream$.subscribe((data) => { // console.log(data);
   functionIncoming(data);
 });

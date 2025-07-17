@@ -1,6 +1,6 @@
 import incomingData from './incomingData';
 
-export default function incoming() {  // console.log('incoming');
+export default function incoming() { // console.log('incoming');
   // вычищаем перед обновлением
   const idIncomings = document.querySelector('#incomings'); // console.log(idIncomings);
   if (idIncomings.children.length > 0) {
