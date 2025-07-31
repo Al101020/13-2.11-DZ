@@ -36,12 +36,12 @@ const stream$ = new Observable((observer) => {
         throw new Error(`Ошибка загрузки данных: ${response.status}`);
       })
       .then((value) => {
-        fetchData = value;
+        fetchData = value; // console.log(value);
+        observer.next(fetchData);
       })
       .catch((error) => {
         console.log('Ошибка:', error);
       });
-    observer.next(fetchData);
   }, 5000);
 });
 
